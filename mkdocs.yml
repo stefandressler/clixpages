@@ -1,0 +1,119 @@
+site_name: clixPages
+# site_url: https://mydomain.org/mysite
+repo_url: https://github.com/stefandressler/clixpages
+repo_name: stefandressler/clixpages
+copyright: Copyright &copy; 2024
+
+nav:
+  - './': index.md
+  - Set Up:
+    - setup/index.md
+    - Console: setup/console.md
+    - GUI: setup/gui.md
+
+extra:
+  generator: false
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.indexes
+    - navigation.footer
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - toc.follow
+
+  icon:
+    logo: material/library
+    repo: fontawesome/brands/github-alt
+  palette: 
+    # Palette toggle for automatic mode
+    # - media: "(prefers-color-scheme)"
+    #   toggle:
+    #     icon: material/brightness-auto
+    #     name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to system preference
+
+plugins:
+  - search
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+      sort_authors_by: name
+      exclude:
+        - tags.md
+      enabled: true
+  - git-revision-date-localized:
+      exclude:
+        - tags.md
+      enable_creation_date: true
+      fallback_to_build_date: true
+  - tags:
+      tags_file: tags.md
+
+markdown_extensions:
+ # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: On this page
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+validation:
+  nav:
+    not_found: warn
+  links:
+    not_found: warn
+    absolute_links: warn
+    unrecognized_links: warn
+    anchors: warn

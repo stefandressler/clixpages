@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stefandressler/clixpage"
+  },
+  "scripts": {
+    "venv:init": "python3 -m venv ~/.venv",
+    "venv:activate": "source ~/.venv/bin/activate",
+    "venv:install": "python3 -m pip install",
+    "venv:deactivate": "deactivate",
+    "serve": "mkdocs serve",
+    "serve:strict": "mkdocs serve --strict"
+  }
+}
