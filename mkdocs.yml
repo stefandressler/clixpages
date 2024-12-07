@@ -5,11 +5,13 @@ repo_name: stefandressler/clixpages
 copyright: Copyright &copy; 2024
 
 nav:
-  - './': index.md
+  - '//': index.md
   - Set Up:
     - setup/index.md
+    - Prerequisites: setup/prerequisites.md
     - Console: setup/console.md
-    - GUI: setup/gui.md
+    - Interface: setup/interface.md
+    - Apps: setup/apps.md
 
 extra:
   generator: false
@@ -18,6 +20,7 @@ theme:
   name: material
   custom_dir: overrides
   features:
+    - content.code.copy
     - navigation.indexes
     - navigation.footer
     - navigation.sections
