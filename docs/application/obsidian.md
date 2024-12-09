@@ -1,0 +1,7 @@
+---
+tags:
+  - app
+  - obsidian
+---
+
+# Obsidian

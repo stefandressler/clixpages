@@ -10,7 +10,9 @@
     "venv:activate": "source ~/.venv/bin/activate",
     "venv:install": "python3 -m pip install",
     "venv:deactivate": "deactivate",
+    "build": "mkdocs build",
     "serve": "mkdocs serve",
-    "serve:strict": "mkdocs serve --strict"
+    "serve:strict": "mkdocs serve --strict",
+    "deploy": "mkdocs gh-deploy"
   }
 }
